@@ -1698,3 +1698,202 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000463s ]
 INFO: [ app_end ] --END-- [ RunTime:0.000495s ]
 
+[ 2017-10-20T17:35:05+08:00 ] 127.0.0.1 /admin.php?m=Admin&c=article&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000465s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000474s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000521s ]
+SQL: SHOW COLUMNS FROM `tpt_member` [ RunTime:0.0059s ]
+SQL: SELECT * FROM `tpt_member` WHERE ( username = 'admin' ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `tpt_article` [ RunTime:0.0051s ]
+SQL: SHOW COLUMNS FROM `tpt_category` [ RunTime:0.0054s ]
+SQL: SELECT COUNT(*) AS tp_count FROM tpt_article article LEFT JOIN tpt_category category ON article.tid=category.id LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\phpStudy\WWW\tpBlog\ThinkPHP\Library\Think\Db\Driver.class.php 第 504 行.
+SQL: SELECT article.id AS id,article.title AS title,article.pic AS pic,article.commend AS commend,article.choice AS choice,article.time AS time,article.open AS open,article.tid AS tid,category.name AS name,category.type AS type FROM tpt_article article LEFT JOIN tpt_category category ON article.tid=category.id ORDER BY article.id DESC LIMIT 0,15   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000047s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000084s ]
+NOTIC: [8] Use of undefined constant pic - assumed 'pic' D:\phpStudy\WWW\tpBlog\Runtime\Cache\Admin\fe3b60fe672510c0886011ecdc14bba9.php 第 71 行.
+NOTIC: [8] Use of undefined constant commend - assumed 'commend' D:\phpStudy\WWW\tpBlog\Runtime\Cache\Admin\fe3b60fe672510c0886011ecdc14bba9.php 第 75 行.
+NOTIC: [8] Use of undefined constant choice - assumed 'choice' D:\phpStudy\WWW\tpBlog\Runtime\Cache\Admin\fe3b60fe672510c0886011ecdc14bba9.php 第 76 行.
+NOTIC: [8] Use of undefined constant tid - assumed 'tid' D:\phpStudy\WWW\tpBlog\Runtime\Cache\Admin\fe3b60fe672510c0886011ecdc14bba9.php 第 77 行.
+NOTIC: [8] Use of undefined constant open - assumed 'open' D:\phpStudy\WWW\tpBlog\Runtime\Cache\Admin\fe3b60fe672510c0886011ecdc14bba9.php 第 78 行.
+NOTIC: [8] Use of undefined constant pic - assumed 'pic' D:\phpStudy\WWW\tpBlog\Runtime\Cache\Admin\fe3b60fe672510c0886011ecdc14bba9.php 第 71 行.
+NOTIC: [8] Use of undefined constant commend - assumed 'commend' D:\phpStudy\WWW\tpBlog\Runtime\Cache\Admin\fe3b60fe672510c0886011ecdc14bba9.php 第 75 行.
+NOTIC: [8] Use of undefined constant choice - assumed 'choice' D:\phpStudy\WWW\tpBlog\Runtime\Cache\Admin\fe3b60fe672510c0886011ecdc14bba9.php 第 76 行.
+NOTIC: [8] Use of undefined constant tid - assumed 'tid' D:\phpStudy\WWW\tpBlog\Runtime\Cache\Admin\fe3b60fe672510c0886011ecdc14bba9.php 第 77 行.
+NOTIC: [8] Use of undefined constant open - assumed 'open' D:\phpStudy\WWW\tpBlog\Runtime\Cache\Admin\fe3b60fe672510c0886011ecdc14bba9.php 第 78 行.
+NOTIC: [8] Use of undefined constant pic - assumed 'pic' D:\phpStudy\WWW\tpBlog\Runtime\Cache\Admin\fe3b60fe672510c0886011ecdc14bba9.php 第 71 行.
+NOTIC: [8] Use of undefined constant commend - assumed 'commend' D:\phpStudy\WWW\tpBlog\Runtime\Cache\Admin\fe3b60fe672510c0886011ecdc14bba9.php 第 75 行.
+NOTIC: [8] Use of undefined constant choice - assumed 'choice' D:\phpStudy\WWW\tpBlog\Runtime\Cache\Admin\fe3b60fe672510c0886011ecdc14bba9.php 第 76 行.
+NOTIC: [8] Use of undefined constant tid - assumed 'tid' D:\phpStudy\WWW\tpBlog\Runtime\Cache\Admin\fe3b60fe672510c0886011ecdc14bba9.php 第 77 行.
+NOTIC: [8] Use of undefined constant open - assumed 'open' D:\phpStudy\WWW\tpBlog\Runtime\Cache\Admin\fe3b60fe672510c0886011ecdc14bba9.php 第 78 行.
+NOTIC: [8] Use of undefined constant pic - assumed 'pic' D:\phpStudy\WWW\tpBlog\Runtime\Cache\Admin\fe3b60fe672510c0886011ecdc14bba9.php 第 71 行.
+NOTIC: [8] Use of undefined constant commend - assumed 'commend' D:\phpStudy\WWW\tpBlog\Runtime\Cache\Admin\fe3b60fe672510c0886011ecdc14bba9.php 第 75 行.
+NOTIC: [8] Use of undefined constant choice - assumed 'choice' D:\phpStudy\WWW\tpBlog\Runtime\Cache\Admin\fe3b60fe672510c0886011ecdc14bba9.php 第 76 行.
+NOTIC: [8] Use of undefined constant tid - assumed 'tid' D:\phpStudy\WWW\tpBlog\Runtime\Cache\Admin\fe3b60fe672510c0886011ecdc14bba9.php 第 77 行.
+NOTIC: [8] Use of undefined constant open - assumed 'open' D:\phpStudy\WWW\tpBlog\Runtime\Cache\Admin\fe3b60fe672510c0886011ecdc14bba9.php 第 78 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009623s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009669s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000485s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000516s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000554s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000584s ]
+
+[ 2017-10-20T17:35:22+08:00 ] 127.0.0.1 /admin.php?m=Admin&c=article&a=edit&id=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000477s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000535s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000581s ]
+SQL: SHOW COLUMNS FROM `tpt_member` [ RunTime:0.0049s ]
+SQL: SELECT * FROM `tpt_member` WHERE ( username = 'admin' ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `tpt_category` [ RunTime:0.0048s ]
+SQL: SELECT * FROM `tpt_category` WHERE ( type = 1 )  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `tpt_article` [ RunTime:0.0058s ]
+SQL: SELECT * FROM `tpt_article` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000104s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000173s ]
+NOTIC: [8] Use of undefined constant tid - assumed 'tid' D:\phpStudy\WWW\tpBlog\Runtime\Cache\Admin\0ea42312e208240db0152206cb8068ef.php 第 75 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpStudy\WWW\tpBlog\Runtime\Cache\Admin\0ea42312e208240db0152206cb8068ef.php 第 75 行.
+NOTIC: [8] Use of undefined constant tid - assumed 'tid' D:\phpStudy\WWW\tpBlog\Runtime\Cache\Admin\0ea42312e208240db0152206cb8068ef.php 第 75 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpStudy\WWW\tpBlog\Runtime\Cache\Admin\0ea42312e208240db0152206cb8068ef.php 第 75 行.
+NOTIC: [8] Use of undefined constant tid - assumed 'tid' D:\phpStudy\WWW\tpBlog\Runtime\Cache\Admin\0ea42312e208240db0152206cb8068ef.php 第 75 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpStudy\WWW\tpBlog\Runtime\Cache\Admin\0ea42312e208240db0152206cb8068ef.php 第 75 行.
+NOTIC: [8] Use of undefined constant tid - assumed 'tid' D:\phpStudy\WWW\tpBlog\Runtime\Cache\Admin\0ea42312e208240db0152206cb8068ef.php 第 75 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpStudy\WWW\tpBlog\Runtime\Cache\Admin\0ea42312e208240db0152206cb8068ef.php 第 75 行.
+NOTIC: [8] Use of undefined constant tid - assumed 'tid' D:\phpStudy\WWW\tpBlog\Runtime\Cache\Admin\0ea42312e208240db0152206cb8068ef.php 第 75 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpStudy\WWW\tpBlog\Runtime\Cache\Admin\0ea42312e208240db0152206cb8068ef.php 第 75 行.
+NOTIC: [8] Use of undefined constant tid - assumed 'tid' D:\phpStudy\WWW\tpBlog\Runtime\Cache\Admin\0ea42312e208240db0152206cb8068ef.php 第 75 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpStudy\WWW\tpBlog\Runtime\Cache\Admin\0ea42312e208240db0152206cb8068ef.php 第 75 行.
+NOTIC: [8] Use of undefined constant pic - assumed 'pic' D:\phpStudy\WWW\tpBlog\Runtime\Cache\Admin\0ea42312e208240db0152206cb8068ef.php 第 115 行.
+NOTIC: [8] Use of undefined constant keywords - assumed 'keywords' D:\phpStudy\WWW\tpBlog\Runtime\Cache\Admin\0ea42312e208240db0152206cb8068ef.php 第 140 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011098s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011136s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000420s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000452s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000868s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000925s ]
+
+[ 2017-10-20T17:35:37+08:00 ] 127.0.0.1 /admin.php?m=Admin&c=article&a=edit&id=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000826s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000537s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000585s ]
+SQL: SHOW COLUMNS FROM `tpt_member` [ RunTime:0.0064s ]
+SQL: SELECT * FROM `tpt_member` WHERE ( username = 'admin' ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `tpt_category` [ RunTime:0.0048s ]
+SQL: SELECT * FROM `tpt_category` WHERE ( type = 1 )  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `tpt_article` [ RunTime:0.0051s ]
+SQL: SELECT * FROM `tpt_article` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000075s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000130s ]
+NOTIC: [8] Use of undefined constant tid - assumed 'tid' D:\phpStudy\WWW\tpBlog\Runtime\Cache\Admin\0ea42312e208240db0152206cb8068ef.php 第 75 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpStudy\WWW\tpBlog\Runtime\Cache\Admin\0ea42312e208240db0152206cb8068ef.php 第 75 行.
+NOTIC: [8] Use of undefined constant tid - assumed 'tid' D:\phpStudy\WWW\tpBlog\Runtime\Cache\Admin\0ea42312e208240db0152206cb8068ef.php 第 75 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpStudy\WWW\tpBlog\Runtime\Cache\Admin\0ea42312e208240db0152206cb8068ef.php 第 75 行.
+NOTIC: [8] Use of undefined constant tid - assumed 'tid' D:\phpStudy\WWW\tpBlog\Runtime\Cache\Admin\0ea42312e208240db0152206cb8068ef.php 第 75 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpStudy\WWW\tpBlog\Runtime\Cache\Admin\0ea42312e208240db0152206cb8068ef.php 第 75 行.
+NOTIC: [8] Use of undefined constant tid - assumed 'tid' D:\phpStudy\WWW\tpBlog\Runtime\Cache\Admin\0ea42312e208240db0152206cb8068ef.php 第 75 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpStudy\WWW\tpBlog\Runtime\Cache\Admin\0ea42312e208240db0152206cb8068ef.php 第 75 行.
+NOTIC: [8] Use of undefined constant tid - assumed 'tid' D:\phpStudy\WWW\tpBlog\Runtime\Cache\Admin\0ea42312e208240db0152206cb8068ef.php 第 75 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpStudy\WWW\tpBlog\Runtime\Cache\Admin\0ea42312e208240db0152206cb8068ef.php 第 75 行.
+NOTIC: [8] Use of undefined constant tid - assumed 'tid' D:\phpStudy\WWW\tpBlog\Runtime\Cache\Admin\0ea42312e208240db0152206cb8068ef.php 第 75 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpStudy\WWW\tpBlog\Runtime\Cache\Admin\0ea42312e208240db0152206cb8068ef.php 第 75 行.
+NOTIC: [8] Use of undefined constant pic - assumed 'pic' D:\phpStudy\WWW\tpBlog\Runtime\Cache\Admin\0ea42312e208240db0152206cb8068ef.php 第 115 行.
+NOTIC: [8] Use of undefined constant keywords - assumed 'keywords' D:\phpStudy\WWW\tpBlog\Runtime\Cache\Admin\0ea42312e208240db0152206cb8068ef.php 第 140 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009976s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010019s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000447s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000479s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000545s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000587s ]
+
+[ 2017-10-20T17:36:10+08:00 ] 127.0.0.1 /admin.php?m=Admin&c=category&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000990s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000638s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000689s ]
+SQL: SHOW COLUMNS FROM `tpt_member` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `tpt_member` WHERE ( username = 'admin' ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `tpt_category` [ RunTime:0.0045s ]
+SQL: SELECT * FROM `tpt_category` WHERE ( tid = 0 ) ORDER BY id ASC  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `tpt_category` WHERE ( tid != 0 ) ORDER BY id ASC  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000066s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000111s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010743s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010788s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000387s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000420s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000498s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000529s ]
+
+[ 2017-10-20T17:36:12+08:00 ] 127.0.0.1 /admin.php?m=Admin&c=article&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000566s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000598s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000645s ]
+SQL: SHOW COLUMNS FROM `tpt_member` [ RunTime:0.0061s ]
+SQL: SELECT * FROM `tpt_member` WHERE ( username = 'admin' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `tpt_article` [ RunTime:0.0041s ]
+SQL: SHOW COLUMNS FROM `tpt_category` [ RunTime:0.0049s ]
+SQL: SELECT COUNT(*) AS tp_count FROM tpt_article article LEFT JOIN tpt_category category ON article.tid=category.id LIMIT 1   [ RunTime:0.0004s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\phpStudy\WWW\tpBlog\ThinkPHP\Library\Think\Db\Driver.class.php 第 504 行.
+SQL: SELECT article.id AS id,article.title AS title,article.pic AS pic,article.commend AS commend,article.choice AS choice,article.time AS time,article.open AS open,article.tid AS tid,category.name AS name,category.type AS type FROM tpt_article article LEFT JOIN tpt_category category ON article.tid=category.id ORDER BY article.id DESC LIMIT 0,15   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000051s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000088s ]
+NOTIC: [8] Use of undefined constant pic - assumed 'pic' D:\phpStudy\WWW\tpBlog\Runtime\Cache\Admin\fe3b60fe672510c0886011ecdc14bba9.php 第 71 行.
+NOTIC: [8] Use of undefined constant commend - assumed 'commend' D:\phpStudy\WWW\tpBlog\Runtime\Cache\Admin\fe3b60fe672510c0886011ecdc14bba9.php 第 75 行.
+NOTIC: [8] Use of undefined constant choice - assumed 'choice' D:\phpStudy\WWW\tpBlog\Runtime\Cache\Admin\fe3b60fe672510c0886011ecdc14bba9.php 第 76 行.
+NOTIC: [8] Use of undefined constant tid - assumed 'tid' D:\phpStudy\WWW\tpBlog\Runtime\Cache\Admin\fe3b60fe672510c0886011ecdc14bba9.php 第 77 行.
+NOTIC: [8] Use of undefined constant open - assumed 'open' D:\phpStudy\WWW\tpBlog\Runtime\Cache\Admin\fe3b60fe672510c0886011ecdc14bba9.php 第 78 行.
+NOTIC: [8] Use of undefined constant pic - assumed 'pic' D:\phpStudy\WWW\tpBlog\Runtime\Cache\Admin\fe3b60fe672510c0886011ecdc14bba9.php 第 71 行.
+NOTIC: [8] Use of undefined constant commend - assumed 'commend' D:\phpStudy\WWW\tpBlog\Runtime\Cache\Admin\fe3b60fe672510c0886011ecdc14bba9.php 第 75 行.
+NOTIC: [8] Use of undefined constant choice - assumed 'choice' D:\phpStudy\WWW\tpBlog\Runtime\Cache\Admin\fe3b60fe672510c0886011ecdc14bba9.php 第 76 行.
+NOTIC: [8] Use of undefined constant tid - assumed 'tid' D:\phpStudy\WWW\tpBlog\Runtime\Cache\Admin\fe3b60fe672510c0886011ecdc14bba9.php 第 77 行.
+NOTIC: [8] Use of undefined constant open - assumed 'open' D:\phpStudy\WWW\tpBlog\Runtime\Cache\Admin\fe3b60fe672510c0886011ecdc14bba9.php 第 78 行.
+NOTIC: [8] Use of undefined constant pic - assumed 'pic' D:\phpStudy\WWW\tpBlog\Runtime\Cache\Admin\fe3b60fe672510c0886011ecdc14bba9.php 第 71 行.
+NOTIC: [8] Use of undefined constant commend - assumed 'commend' D:\phpStudy\WWW\tpBlog\Runtime\Cache\Admin\fe3b60fe672510c0886011ecdc14bba9.php 第 75 行.
+NOTIC: [8] Use of undefined constant choice - assumed 'choice' D:\phpStudy\WWW\tpBlog\Runtime\Cache\Admin\fe3b60fe672510c0886011ecdc14bba9.php 第 76 行.
+NOTIC: [8] Use of undefined constant tid - assumed 'tid' D:\phpStudy\WWW\tpBlog\Runtime\Cache\Admin\fe3b60fe672510c0886011ecdc14bba9.php 第 77 行.
+NOTIC: [8] Use of undefined constant open - assumed 'open' D:\phpStudy\WWW\tpBlog\Runtime\Cache\Admin\fe3b60fe672510c0886011ecdc14bba9.php 第 78 行.
+NOTIC: [8] Use of undefined constant pic - assumed 'pic' D:\phpStudy\WWW\tpBlog\Runtime\Cache\Admin\fe3b60fe672510c0886011ecdc14bba9.php 第 71 行.
+NOTIC: [8] Use of undefined constant commend - assumed 'commend' D:\phpStudy\WWW\tpBlog\Runtime\Cache\Admin\fe3b60fe672510c0886011ecdc14bba9.php 第 75 行.
+NOTIC: [8] Use of undefined constant choice - assumed 'choice' D:\phpStudy\WWW\tpBlog\Runtime\Cache\Admin\fe3b60fe672510c0886011ecdc14bba9.php 第 76 行.
+NOTIC: [8] Use of undefined constant tid - assumed 'tid' D:\phpStudy\WWW\tpBlog\Runtime\Cache\Admin\fe3b60fe672510c0886011ecdc14bba9.php 第 77 行.
+NOTIC: [8] Use of undefined constant open - assumed 'open' D:\phpStudy\WWW\tpBlog\Runtime\Cache\Admin\fe3b60fe672510c0886011ecdc14bba9.php 第 78 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008883s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008920s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000401s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000432s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000714s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000744s ]
+

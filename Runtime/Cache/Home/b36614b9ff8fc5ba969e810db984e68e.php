@@ -97,7 +97,7 @@
 		<div class="pages"><?php echo ($page); ?></div>
 	</div>
 	<div class="tpt-mr-3">
-		<div class="tpt-sidebar cl" style="border-top:5px solid #F73856;">
+		<div class="tpt-sidebar cl">
 	<div class="search">
 		<form action="/index.php/search.html" method="get">
 			<input placeholder="输入关键字" name="kw" value="<?php echo I('kw');?>" type="text" required>
