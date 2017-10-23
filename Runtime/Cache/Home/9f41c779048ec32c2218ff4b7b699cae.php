@@ -9,16 +9,15 @@
 <meta name="uyan_auth" content="6aa51c9f35" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="/favicon.ico" rel="shortcut icon">
-<link rel="stylesheet" href="/Templet/default/Public/css/global.css">
-<link rel="stylesheet" href="/Templet/default/Public/css/style.css">
-<link rel="stylesheet" href="/Templet/default/Public/css/demo.css">
-<script src="/Templet/default/Public/js/jquery-1.9.1.min.js"></script>
-<script src="/Templet/default/Public/js/jquery.cbFlyout.js"></script>
+<link rel="stylesheet" href="/Templet/index/public/css/global.css">
+<link rel="stylesheet" href="/Templet/index/public/css/style.css">
+<script src="/Templet/index/public/js/jquery-1.9.1.min.js"></script>
+<script src="/Templet/index/public/js/jquery.cbFlyout.js"></script>
 </head>
 <body>
 <div class="yoho167-header cl">
 	<div class="yoho167-wp cl">
-		<div class="yoho167-ml-7">
+		<div class="yoho167-ml-7 header-nav">
 			<div class="yoho167-mds">
 				<div class="logo">
 					<a href="/" title="<?php echo ($tptc["title"]); ?>"><img src="/Uploads<?php echo ($tpte["logo"]); ?>" alt="<?php echo ($tpte["title"]); ?>"></a>
@@ -47,7 +46,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="yoho167-mr-3">
+		<div class="yoho167-mr-3 tougou-btn">
 			<div class="yoho167-mds">
 				<?php if($tpte['open'] == 1): ?><div class="status">
 					<a target="_blank" href="<?php echo U('index/tougao');?>">欢迎投稿</a>
@@ -63,7 +62,7 @@
 	</div>
 </div>
 
-<link rel="stylesheet" type="text/css" href="/Public/wangEditor/css/wangEditor.min.css">
+<link rel="stylesheet" type="text/css" href="/public/wangEditor/css/wangEditor.min.css">
 <style type="text/css">
 .wangEditor-container .wangEditor-txt {padding: 0;margin-top: 0;overflow-y: auto;}
 .wangEditor-container {border: 0px solid #fff;}
@@ -95,11 +94,32 @@
 					<a href="<?php echo U('Home/index/category',array('id'=>$tpti['id']));?>"><?php endif; echo ($tpti["name"]); ?></a></span>
 				</div>
 			</div>
+			<!--文章正文 start-->
 			<div class="wangEditor-container cl">
-				<div class="wangEditor-txt">
-<?php echo ($content); ?>
+				<div class="wangEditor-txt"><?php echo ($content); ?></div>
+			</div>
+			<!--文章正文 end-->
+			<!--上一篇、下一篇 start-->
+			<div class="prev-next-nav">
+				<div class="prev">
+					<span><<上一篇：</span>
+					<a href="<?php echo U('Home/index/article',array('id'=>$prev_article['id']));?>"><?php echo ($prev_article["title"]); ?></a>
+					<if condition="count($prev_article) eq 0"> <a href="javascript:;">没有了</a> <if>
+				</div>
+
+				<div class="next">
+					<span>下一篇：</span>
+					<a href="<?php echo U('Home/index/article',array('id'=>$next_article['id']));?>"><?php echo ($next_article["title"]); ?></a>
+					>>
 				</div>
 			</div>
+			<!--上一篇、下一篇 end-->
+			<!--打赏 start-->
+			<div class="gratuity">
+				<p>如果觉得我的文章对您有用，请随意打赏一下。您的支持将是我继续创作的动力！</p>
+				<a href="javascript:;">￥打赏支持￥</a>
+			</div>
+			<!--打赏 end-->
 			<!-- <div class="neirong-shouquan">
 				<span class="c2">*文章为作者独立观点，不代表Templet360的立场<br>
 				</span>
@@ -149,7 +169,7 @@ conf: '<?php echo C("WEB_CKEY");?>'
 		<a title="<?php echo ($vo["title"]); ?>" href="<?php echo U('Home/index/article',array('id'=>$vo['id']));?>"><?php endif; ?>
 		<?php if($vo[pic] != ''): ?><img src="/Uploads<?php echo ($vo["pic"]); ?>" alt="<?php echo ($vo["title"]); ?>">
 		<?php else: ?>
-        <img src="/Templet/default/Public/img/1.jpg" alt="暂无缩略图"><?php endif; ?>
+        <img src="/Templet/index/public/img/1.jpg" alt="暂无缩略图"><?php endif; ?>
 		</a>
 		</div>
 		<p>
@@ -187,7 +207,7 @@ conf: '<?php echo C("WEB_CKEY");?>'
 		</div>
 	</div>
 </div>
-<script src="/Templet/default/Public/js/common.js"></script>
+<script src="/Templet/index/public/js/common.js"></script>
 
 </body>
 </html>

@@ -1,0 +1,52 @@
+<div class="yoho167-sidebar cl">
+	<div class="search">
+		<form action="__ROOT__/index.php/search.html" method="get">
+			<input placeholder="输入关键字" name="kw" value="<?php echo I('kw');?>" type="text" required>
+			<button value="查询" class="submit-btn" type="submit">搜索</button>
+		</form>
+	</div>
+</div>
+<div class="yoho167-sidebar cl">
+	<h3>热门推荐</h3>
+	<ul class="yoho167-c cl">
+		<volist name="tptb" id="vo">
+		<li><if condition="C('WEB_URL') eq 1"><a title="{$vo.title}" href="__ROOT__/article/{$vo.id}.html"><else/>
+		<a title="{$vo.title}" href="{:U('Home/index/article',array('id'=>$vo['id']))}"></if>{$vo.title}</a>
+		<p>
+			{$vo.time|date="Y-m-d H:i:s",###}
+		</p>
+		</li>
+		</volist>
+	</ul>
+</div>
+<div class="yoho167-sidebar cl">
+	<h3>精选内容</h3>
+	<ul class="yoho167-d cl">
+		<volist name="tptc" id="vo">
+		<li>
+		<div>
+		<if condition="C('WEB_URL') eq 1"><a title="{$vo.title}" href="__ROOT__/article/{$vo.id}.html"><else/>
+		<a title="{$vo.title}" href="{:U('Home/index/article',array('id'=>$vo['id']))}"></if>
+		<if condition="$vo[pic] neq ''">
+		<img src="__ROOT__/Uploads{$vo.pic}" alt="{$vo.title}">
+		<else />
+        <img src="__HOME__/img/1.jpg" alt="暂无缩略图">
+        </if>
+		</a>
+		</div>
+		<p>
+			<if condition="C('WEB_URL') eq 1"><a title="{$vo.title}" href="__ROOT__/article/{$vo.id}.html"><else/>
+			<a title="{$vo.title}" href="{:U('Home/index/article',array('id'=>$vo['id']))}"></if>{$vo.title}</a>
+		</p>
+		</li>
+		</volist>
+	</ul>
+</div>
+<div class="yoho167-sidebar cl">
+	<h3>友情连接</h3>
+	<ul class="yoho167-e cl">
+		<volist name="tptd" id="vo">
+			<li><a target="_blank" href="{$vo.link}">{$vo.name}</a></li>
+		</volist>
+	</ul>
+</div>

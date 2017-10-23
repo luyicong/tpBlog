@@ -85,6 +85,15 @@ class IndexController extends BaseController
             $this->assign('content', $content);
             $category = D('category');
             $tpti = $category->where("id = {$tptl['tid']}")->find();
+
+            //上一篇
+            $prev = $article->where("id<".$id)->where($open)->order('id DESC')->limit(1)->field('id,title')->find();
+            //下一篇
+            $next = $article->where("id>".$id)->where($open)->order('id DESC')->limit(1)->field('id,title')->find();
+            //分配变量给模板
+            $this->assign("prev_article", $prev);
+            $this->assign("next_article", $next);
+
             $this->assign("tpti", $tpti);
             $this->display();
         } else {
