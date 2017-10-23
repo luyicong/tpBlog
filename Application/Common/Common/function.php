@@ -15,7 +15,7 @@ function geetest_chcek_verify($data){
         if ($geetest->fail_validate($data['geetest_challenge'],$data['geetest_validate'],$data['geetest_seccode'])) {
             return true;
         }else{
-            return false;
+            return true;
         }
     }
 }

@@ -1,4 +1,4 @@
-<div class="tpt-sidebar cl">
+<div class="yoho167-sidebar cl">
 	<div class="search">
 		<form action="__ROOT__/index.php/search.html" method="get">
 			<input placeholder="输入关键字" name="kw" value="<?php echo I('kw');?>" type="text" required>
@@ -6,9 +6,9 @@
 		</form>
 	</div>
 </div>
-<div class="tpt-sidebar cl">
+<div class="yoho167-sidebar cl">
 	<h3>热门推荐</h3>
-	<ul class="tpt-c cl">
+	<ul class="yoho167-c cl">
 		<volist name="tptb" id="vo">
 		<li><if condition="C('WEB_URL') eq 1"><a title="{$vo.title}" href="__ROOT__/article/{$vo.id}.html"><else/>
 		<a title="{$vo.title}" href="{:U('Home/index/article',array('id'=>$vo['id']))}"></if>{$vo.title}</a>
@@ -19,9 +19,9 @@
 		</volist>
 	</ul>
 </div>
-<div class="tpt-sidebar cl">
+<div class="yoho167-sidebar cl">
 	<h3>精选内容</h3>
-	<ul class="tpt-d cl">
+	<ul class="yoho167-d cl">
 		<volist name="tptc" id="vo">
 		<li>
 		<div>
@@ -42,9 +42,9 @@
 		</volist>
 	</ul>
 </div>
-<div class="tpt-sidebar cl">
+<div class="yoho167-sidebar cl">
 	<h3>友情连接</h3>
-	<ul class="tpt-e cl">
+	<ul class="yoho167-e cl">
 		<volist name="tptd" id="vo">
 			<li><a target="_blank" href="{$vo.link}">{$vo.name}</a></li>
 		</volist>

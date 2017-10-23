@@ -16,10 +16,10 @@
 <script src="/Templet/default/Public/js/jquery.cbFlyout.js"></script>
 </head>
 <body>
-<div class="tpt-header cl">
-	<div class="tpt-wp cl">
-		<div class="tpt-ml-7">
-			<div class="tpt-mds">
+<div class="yoho167-header cl">
+	<div class="yoho167-wp cl">
+		<div class="yoho167-ml-7">
+			<div class="yoho167-mds">
 				<div class="logo">
 					<a href="/" title="<?php echo ($tptc["title"]); ?>"><img src="/Uploads<?php echo ($tpte["logo"]); ?>" alt="<?php echo ($tpte["title"]); ?>"></a>
 				</div>
@@ -27,7 +27,7 @@
 				</div>
 				<div class="layout-right-content">
 					<header class="the-header">
-					<div class="navbar container tpt-right-1024">
+					<div class="navbar container yoho167-right-1024">
 						<!-- Trigger -->
 						<a class="btn-navbar btn-navbar-navtoggle btn-flyout-trigger" href="javascript:;"><i style="color: #fff;font-size: 28px;" class="iconfont">&#xe607;</i></a>
 						<!-- Structure -->
@@ -47,8 +47,8 @@
 				</div>
 			</div>
 		</div>
-		<div class="tpt-mr-3">
-			<div class="tpt-mds">
+		<div class="yoho167-mr-3">
+			<div class="yoho167-mds">
 				<?php if($tpte['open'] == 1): ?><div class="status">
 					<a target="_blank" href="<?php echo U('index/tougao');?>">欢迎投稿</a>
 				</div><?php endif; ?>
@@ -70,11 +70,11 @@
 .wangEditor-container .wangEditor-txt pre {border: 1px solid #f8f8f8;}
 .wangEditor-container .wangEditor-txt img {max-width: 100%;height: auto;}
 </style>
-<!-- tpt-ml-7 tpt-mr-3 -->
-<div class="tpt-wp tpt-pat-75 cl">
-	<div class="tpt-ml-7">
-	<div class="tpt-f">
-		<div class="tpt-none-768 cl">
+<!-- yoho167-ml-7 yoho167-mr-3 -->
+<div class="yoho167-wp yoho167-pat-75 cl">
+	<div class="yoho167-ml-7">
+	<div class="yoho167-f">
+		<div class="yoho167-none-768 cl">
 		<div class="bdsharebuttonbox">
 			<a href="#" class="bds_tsina1 bds_ico" data-cmd="tsina" title="分享到新浪微博"></a>
 			<a href="#" class="bds_weixin1 bds_ico" data-cmd="weixin" title="分享到微信"></a>
@@ -100,12 +100,12 @@
 <?php echo ($content); ?>
 				</div>
 			</div>
-			<div class="neirong-shouquan">
+			<!-- <div class="neirong-shouquan">
 				<span class="c2">*文章为作者独立观点，不代表Templet360的立场<br>
 				</span>
 				<span id="pinglun">本文由Templet360发表并编辑，转载此文章须经作者同意，并请附上出处及本页链接。如有侵权，请联系本站删除。
 				</span>
-			</div>
+			</div> -->
 <div style="margin-top: 25px;"></div>
 <!-- 评论代码 -->
 <div id="SOHUCS" sid="<?php echo ($tptl["id"]); ?>"></div>
@@ -120,8 +120,8 @@ conf: '<?php echo C("WEB_CKEY");?>'
 		</div>
 	    </div>
 	</div></div>
-	<div class="tpt-mr-3">
-		<div class="tpt-sidebar cl">
+	<div class="yoho167-mr-3">
+		<div class="yoho167-sidebar cl">
 	<div class="search">
 		<form action="/index.php/search.html" method="get">
 			<input placeholder="输入关键字" name="kw" value="<?php echo I('kw');?>" type="text" required>
@@ -129,9 +129,9 @@ conf: '<?php echo C("WEB_CKEY");?>'
 		</form>
 	</div>
 </div>
-<div class="tpt-sidebar cl">
+<div class="yoho167-sidebar cl">
 	<h3>热门推荐</h3>
-	<ul class="tpt-c cl">
+	<ul class="yoho167-c cl">
 		<?php if(is_array($tptb)): $i = 0; $__LIST__ = $tptb;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><li><?php if(C('WEB_URL') == 1): ?><a title="<?php echo ($vo["title"]); ?>" href="/article/<?php echo ($vo["id"]); ?>.html"><?php else: ?>
 		<a title="<?php echo ($vo["title"]); ?>" href="<?php echo U('Home/index/article',array('id'=>$vo['id']));?>"><?php endif; echo ($vo["title"]); ?></a>
 		<p>
@@ -140,9 +140,9 @@ conf: '<?php echo C("WEB_CKEY");?>'
 		</li><?php endforeach; endif; else: echo "" ;endif; ?>
 	</ul>
 </div>
-<div class="tpt-sidebar cl">
+<div class="yoho167-sidebar cl">
 	<h3>精选内容</h3>
-	<ul class="tpt-d cl">
+	<ul class="yoho167-d cl">
 		<?php if(is_array($tptc)): $i = 0; $__LIST__ = $tptc;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><li>
 		<div>
 		<?php if(C('WEB_URL') == 1): ?><a title="<?php echo ($vo["title"]); ?>" href="/article/<?php echo ($vo["id"]); ?>.html"><?php else: ?>
@@ -159,9 +159,9 @@ conf: '<?php echo C("WEB_CKEY");?>'
 		</li><?php endforeach; endif; else: echo "" ;endif; ?>
 	</ul>
 </div>
-<div class="tpt-sidebar cl">
+<div class="yoho167-sidebar cl">
 	<h3>友情连接</h3>
-	<ul class="tpt-e cl">
+	<ul class="yoho167-e cl">
 		<?php if(is_array($tptd)): $i = 0; $__LIST__ = $tptd;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><li><a target="_blank" href="<?php echo ($vo["link"]); ?>"><?php echo ($vo["name"]); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
 	</ul>
 </div>
@@ -169,18 +169,17 @@ conf: '<?php echo C("WEB_CKEY");?>'
 	</div>
 </div>
 <!-- NET -->
-<div class="tpt-footer footer tpt-mat-30">
-	<div class="tpt-wp cl">
-		<div class="tpt-md-1">
-			<div class="tpt-mds">
-				<p class="bq">
-Copyright© 2014-2017
+<div class="yoho167-footer footer yoho167-mat-30">
+	<div class="yoho167-wp cl">
+		<div class="yoho167-md-1">
+			<div class="yoho167-mds">
+				<p class="bq">Copyright© 2015-2017
+					<!-- <span class="pipe">|</span> -->
+          <a class="banquan" target="_blank" href="/">Powered by YOHO167</a>
+					<span class="yoho167-none-768 yoho167-none-1024">
 					<span class="pipe">|</span>
-                    <a class="banquan" target="_blank" href="https://www.templet360.com/">Powered by Templet360</a>
-					<span class="tpt-none-768 tpt-none-1024">
-					<span class="pipe">|</span>
-					<a href="http://www.miitbeian.gov.cn/" target="_blank"><?php echo ($tpte["beian"]); ?></a>
-					<span class="pipe">|</span>
+					<!-- <a href="http://www.miitbeian.gov.cn/" target="_blank"><?php echo ($tpte["beian"]); ?></a>
+					<span class="pipe">|</span> -->
 					<a href="http://wpa.qq.com/msgrd?v=3&uin=<?php echo ($tpte["qqs"]); ?>&site=qq&menu=yes" target="_blank" >QQ:<?php echo ($tpte["qqs"]); ?></a>
 					</span>
 				</p>
@@ -188,24 +187,7 @@ Copyright© 2014-2017
 		</div>
 	</div>
 </div>
-<script>
-			$(document).ready(function(){
-				$('.the-nav').cbFlyout();
-			});
-</script>
-<script type="text/javascript">
-  var urlstr = location.href;
-  //alert((urlstr + '/').indexOf($(this).attr('href')));
-  var urlstatus=false;
-  $("#menu a").each(function () {
-    if ((urlstr + '/').indexOf($(this).attr('href')) > -1&&$(this).attr('href')!='') {
-      $(this).addClass('curs'); urlstatus = true;
-    } else {
-      $(this).removeClass('curs');
-    }
-  });
-  if (!urlstatus) {$("#menu a").eq(0).addClass('curs'); }
-</script>
+<script src="/Templet/default/Public/js/common.js"></script>
 
 </body>
 </html>
