@@ -5,6 +5,7 @@
 <link href="/favicon.ico" rel="shortcut icon">
 <link rel="stylesheet" href="__HOME__/css/global.css">
 <link rel="stylesheet" href="__HOME__/css/style.css">
+<link rel="stylesheet" href="__HOME__/css/animate.css">
 <script src="__HOME__/js/jquery-1.9.1.min.js"></script>
 <script src="__HOME__/js/jquery.cbFlyout.js"></script>
 </head>
@@ -25,27 +26,30 @@
 						<a class="btn-navbar btn-navbar-navtoggle btn-flyout-trigger" href="javascript:;"><i style="color: #fff;font-size: 28px;" class="iconfont">&#xe607;</i></a>
 						<!-- Structure -->
 						<nav class="the-nav nav-collapse clearfix">
-						<ul id="menu" class="nav nav-pill pull-left">
-							<foreach name="tpta" item="vo" key="k">
-							<if condition="$vo['show'] eq 1">
-							<li class="dropdown"><a <if condition="$vo['blank'] eq 1">target="_blank" </if>href="{$vo.link}">{$vo.name}</a>
-							<if condition="$vo['link'] neq ''"><else/>
-							<ul class="subnav">
-								</if>
-								<foreach name="tptas" item="vs" key="k">
-								<if condition ="$vo.id eq $vs['tid']">
-								<if condition="$vs['show'] eq 1">
-								<li><a <if condition="$vs['blank'] eq 1">target="_blank" </if>href="{$vs.link}">{$vs.name}</a></li>
-								</if>
-								</if>
-								</foreach>
-								<if condition="$vo['link'] neq ''"><else/>
-							</ul>
-							</if>
-							</li>
-							</if>
-							</foreach>
-						</ul>
+								<ul id="menu" class="nav nav-pill pull-left">
+									<foreach name="tpta" item="vo" key="k">
+											<if condition="$vo['show'] eq 1">
+													<li class="dropdown" id="{$vo['id']}">
+															<a <if condition="$vo['blank'] eq 1" >target="_blank" </if>href="{$vo.link}">{$vo.name}</a>
+															<if condition="$vo['link'] neq ''"><else/>
+																	<ul class="subnav">
+																		</if>
+																		<foreach name="tptas" item="vs" key="k">
+																				<if condition ="$vo.id eq $vs['tid']">
+																					<if condition="$vs['show'] eq 1">
+																						<li id="{$vs['id']}">
+																							<a <if condition="$vs['blank'] eq 1">target="_blank" </if>href="{$vs.link}">{$vs.name}</a>
+																						</li>
+																					</if>
+																				</if>
+																		</foreach>
+																		<if condition="$vo['link'] neq ''"><else/>
+																	</ul>
+															</if>
+													</li>
+											</if>
+									</foreach>
+								</ul>
 						</nav>
 					</div>
 					</header>

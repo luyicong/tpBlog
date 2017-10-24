@@ -47,12 +47,13 @@
 				<div class="prev">
 					<span><<上一篇：</span>
 					<a href="{:U('Home/index/article',array('id'=>$prev_article['id']))}">{$prev_article.title}</a>
-					<if condition="count($prev_article) eq 0"> <a href="javascript:;">没有了</a> <if>
+					<if condition="count($prev_article) eq 0"> <a class="none" href="javascript:;">没有了</a> </if>
 				</div>
 
 				<div class="next">
 					<span>下一篇：</span>
 					<a href="{:U('Home/index/article',array('id'=>$next_article['id']))}">{$next_article.title}</a>
+					<if condition="count($next_article) eq 0"> <a class="none" href="javascript:;">没有了</a> </if>
 					>>
 				</div>
 			</div>
@@ -60,7 +61,7 @@
 			<!--打赏 start-->
 			<div class="gratuity">
 				<p>如果觉得我的文章对您有用，请随意打赏一下。您的支持将是我继续创作的动力！</p>
-				<a href="javascript:;">￥打赏支持￥</a>
+				<a id="gratuity-alert-btn" href="javascript:;">￥打赏支持￥</a>
 			</div>
 			<!--打赏 end-->
 			<!-- <div class="neirong-shouquan">

@@ -1,10 +1,9 @@
 <?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 <html lang="zh-cn">
 <head>
-<title><?php echo ($tpte["title"]); ?></title>
+<title><?php echo ($tpte["author"]); ?> - <?php echo I('kw');?></title>
 <meta name="keywords" content="<?php echo ($tpte["keywords"]); ?>"/>
 <meta name="description" content="<?php echo ($tpte["description"]); ?>"/>
-<!--公共底部-->
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="uyan_auth" content="6aa51c9f35" />
@@ -69,55 +68,43 @@
 
 <div class="yoho167-wp yoho167-pat-75 cl">
 	<div class="yoho167-ml-7">
-		<div class="yoho167-banner cl">
-			<div class="yoho167-ml-6">
-				<div class="yoho167-a">
-					<a href="<?php echo ($tptf["alink"]); ?>" title="<?php echo ($tptf["atitle"]); ?>"><img src="/Uploads<?php echo ($tptf["apic"]); ?>" alt="<?php echo ($tptf["atitle"]); ?>"></a>
-					<h2><a href="<?php echo ($tptf["alink"]); ?>" title="<?php echo ($tptf["atitle"]); ?>"><?php echo ($tptf["atitle"]); ?></a></h2>
-				</div>
-			</div>
-			<div class="yoho167-mr-4">
-				<ul class="yoho167-b">
-					<li><a href="<?php echo ($tptf["blink"]); ?>" title="<?php echo ($tptf["btitle"]); ?>"><img src="/Uploads<?php echo ($tptf["bpic"]); ?>" alt="<?php echo ($tptf["btitle"]); ?>"></a>
-					<h2><a href="<?php echo ($tptf["blink"]); ?>" title="<?php echo ($tptf["btitle"]); ?>"><?php echo ($tptf["btitle"]); ?></a></h2>
-					</li>
-					<li><a href="<?php echo ($tptf["clink"]); ?>" title="<?php echo ($tptf["ctitle"]); ?>"><img src="/Uploads<?php echo ($tptf["cpic"]); ?>" alt="<?php echo ($tptf["ctitle"]); ?>"></a>
-					<h2><a href="<?php echo ($tptf["clink"]); ?>" title="<?php echo ($tptf["ctitle"]); ?>"><?php echo ($tptf["ctitle"]); ?></a></h2>
-					</li>
-					<ul>
-					</ul>
-				</ul>
-			</div>
+		<div class="breadcrumb cl">
+搜索结果 "
+			<?php echo I('kw');?>
+			"
 		</div>
 		<ul class="main">
-			<?php if(is_array($tptg)): $i = 0; $__LIST__ = $tptg;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><li class="cl">
-			<div class="yoho167-ml-3 cl">
-				<div class="main_left">
-					<?php if($vo[commend] == 1): ?><div class="mod-angle yoho167-none-768">
-								热
-							</div><?php endif; ?>
-							<?php if(C('WEB_URL') == 1): ?><a title="<?php echo ($vo["title"]); ?>" href="/article/<?php echo ($vo["id"]); ?>.html"><?php else: ?>
-					        <a title="<?php echo ($vo["title"]); ?>" href="<?php echo U('Home/index/article',array('id'=>$vo['id']));?>"><?php endif; ?>
-					        <?php if($vo[pic] != ''): ?><img src="/Uploads<?php echo ($vo["pic"]); ?>" alt="<?php echo ($vo["title"]); ?>">
-		                    <?php else: ?>
-                            <img src="/Templet/index/public/img/1.jpg" alt="暂无缩略图"><?php endif; ?>
-					        </a>
+			<?php if(is_array($tpth)): $i = 0; $__LIST__ = $tpth;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i; if($vo[open] == 1): ?><li class="cl">
+				<div class="yoho167-ml-3 cl">
+					<div class="main_left">
+						<?php if($vo[commend] == 1): ?><div class="mod-angle yoho167-none-768">
+									热
+								</div><?php endif; ?>
+								<?php if(C('WEB_URL') == 1): ?><a title="<?php echo ($vo["title"]); ?>" href="/article/<?php echo ($vo["id"]); ?>.html"><?php else: ?>
+						        <a title="<?php echo ($vo["title"]); ?>" href="<?php echo U('Home/index/article',array('id'=>$vo['id']));?>"><?php endif; ?>
+						        <?php if($vo[pic] != ''): ?><img src="/Uploads<?php echo ($vo["pic"]); ?>" alt="<?php echo ($vo["title"]); ?>">
+			                    <?php else: ?>
+	                            <img src="/Templet/index/public/img/1.jpg" alt="暂无缩略图"><?php endif; ?>
+						        </a>
+					</div>
 				</div>
-			</div>
-			<div class="yoho167-mr-7">
-				<div class="main_right cl">
-					<h2><?php if(C('WEB_URL') == 1): ?><a title="<?php echo ($vo["title"]); ?>" href="/article/<?php echo ($vo["id"]); ?>.html"><?php else: ?>
-					<a title="<?php echo ($vo["title"]); ?>" href="<?php echo U('Home/index/article',array('id'=>$vo['id']));?>"><?php endif; echo ($vo["title"]); ?></a></h2>
-					<p>
-						<span><i class="iconfont">&#xe6a3;</i><?php echo ($vo["author"]); ?></span><span class="pipe"></span><span><i class="iconfont">&#xe7e5;</i><?php echo ($vo["name"]); ?></span><span class="pipe"></span><span><i class="iconfont">&#xe6c0;</i><?php echo ($vo["view"]); ?></span><span class="pipe"></span><span class="yoho167-none-768"><i class="iconfont">&#xe64d;</i><?php echo (date("Y-m-d H:i:s",$vo["time"])); ?></span>
-					</p>
-					<p class="yoho167-none-768">
-						<?php echo ($vo["description"]); ?>...
-					</p>
+				<div class="yoho167-mr-7">
+					<div class="main_right cl">
+						<h2><?php if(C('WEB_URL') == 1): ?><a title="<?php echo ($vo["title"]); ?>" href="/article/<?php echo ($vo["id"]); ?>.html"><?php else: ?>
+						<a title="<?php echo ($vo["title"]); ?>" href="<?php echo U('Home/index/article',array('id'=>$vo['id']));?>"><?php endif; echo ($vo["title"]); ?></a></h2>
+						<p>
+							<span><i class="iconfont">&#xe6a3;</i><?php echo ($vo["author"]); ?></span><span class="pipe"></span><span><i class="iconfont">&#xe7e5;</i><?php echo ($vo["name"]); ?></span><span class="pipe"></span><span><i class="iconfont">&#xe6c0;</i><?php echo ($vo["view"]); ?></span><span class="pipe"></span><span class="yoho167-none-768"><i class="iconfont">&#xe64d;</i><?php echo (date("Y-m-d H:i:s",$vo["time"])); ?></span>
+						</p>
+						<p class="yoho167-none-768">
+							<?php echo ($vo["description"]); ?>...
+						</p>
+					</div>
 				</div>
-			</div>
-			</li><?php endforeach; endif; else: echo "" ;endif; ?>
+			</li><?php endif; endforeach; endif; else: echo "" ;endif; ?>
 		</ul>
+		<?php if(count($tpth) == 0): ?><div class="result-empty">
+				<p>无搜索结果</p>
+			</div><?php endif; ?>
 		<div class="pages"><?php echo ($page); ?></div>
 	</div>
 	<div class="yoho167-mr-3">

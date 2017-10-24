@@ -11,6 +11,7 @@
 <link href="/favicon.ico" rel="shortcut icon">
 <link rel="stylesheet" href="/Templet/index/public/css/global.css">
 <link rel="stylesheet" href="/Templet/index/public/css/style.css">
+<link rel="stylesheet" href="/Templet/index/public/css/animate.css">
 <script src="/Templet/index/public/js/jquery-1.9.1.min.js"></script>
 <script src="/Templet/index/public/js/jquery.cbFlyout.js"></script>
 </head>
@@ -31,15 +32,18 @@
 						<a class="btn-navbar btn-navbar-navtoggle btn-flyout-trigger" href="javascript:;"><i style="color: #fff;font-size: 28px;" class="iconfont">&#xe607;</i></a>
 						<!-- Structure -->
 						<nav class="the-nav nav-collapse clearfix">
-						<ul id="menu" class="nav nav-pill pull-left">
-							<?php if(is_array($tpta)): foreach($tpta as $k=>$vo): if($vo['show'] == 1): ?><li class="dropdown"><a <?php if($vo['blank'] == 1): ?>target="_blank"<?php endif; ?>href="<?php echo ($vo["link"]); ?>"><?php echo ($vo["name"]); ?></a>
-							<?php if($vo['link'] != ''): else: ?>
-							<ul class="subnav"><?php endif; ?>
-								<?php if(is_array($tptas)): foreach($tptas as $k=>$vs): if($vo["id"] == $vs['tid']): if($vs['show'] == 1): ?><li><a <?php if($vs['blank'] == 1): ?>target="_blank"<?php endif; ?>href="<?php echo ($vs["link"]); ?>"><?php echo ($vs["name"]); ?></a></li><?php endif; endif; endforeach; endif; ?>
-								<?php if($vo['link'] != ''): else: ?>
-							</ul><?php endif; ?>
-							</li><?php endif; endforeach; endif; ?>
-						</ul>
+								<ul id="menu" class="nav nav-pill pull-left">
+									<?php if(is_array($tpta)): foreach($tpta as $k=>$vo): if($vo['show'] == 1): ?><li class="dropdown" id="<?php echo ($vo['id']); ?>">
+															<a <?php if($vo['blank'] == 1): ?>target="_blank"<?php endif; ?>href="<?php echo ($vo["link"]); ?>"><?php echo ($vo["name"]); ?></a>
+															<?php if($vo['link'] != ''): else: ?>
+																	<ul class="subnav"><?php endif; ?>
+																		<?php if(is_array($tptas)): foreach($tptas as $k=>$vs): if($vo["id"] == $vs['tid']): if($vs['show'] == 1): ?><li id="<?php echo ($vs['id']); ?>">
+																							<a <?php if($vs['blank'] == 1): ?>target="_blank"<?php endif; ?>href="<?php echo ($vs["link"]); ?>"><?php echo ($vs["name"]); ?></a>
+																						</li><?php endif; endif; endforeach; endif; ?>
+																		<?php if($vo['link'] != ''): else: ?>
+																	</ul><?php endif; ?>
+													</li><?php endif; endforeach; endif; ?>
+								</ul>
 						</nav>
 					</div>
 					</header>
@@ -101,7 +105,7 @@
 	<div class="yoho167-mr-3">
 		<div class="yoho167-sidebar cl">
 	<div class="search">
-		<form action="/index.php/search.html" method="get">
+		<form action="/search.html" method="get">
 			<input placeholder="输入关键字" name="kw" value="<?php echo I('kw');?>" type="text" required>
 			<button value="查询" class="submit-btn" type="submit">搜索</button>
 		</form>
@@ -164,6 +168,11 @@
 		</div>
 	</div>
 </div>
+<!--打赏弹窗 start-->
+<div class="gratuity-alert-mask"></div>
+<div class="gratuity-alert-box animated">
+</div>
+<!--打赏弹窗 end-->
 <script src="/Templet/index/public/js/common.js"></script>
 
 </head>

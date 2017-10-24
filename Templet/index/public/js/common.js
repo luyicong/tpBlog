@@ -4,15 +4,47 @@ $(document).ready(function(){
   // $('.banquan').on('click',function(e) {
   // 	e.preventDefault()
   // })
-});
-var urlstr = location.href;
-//alert((urlstr + '/').indexOf($(this).attr('href')));
-var urlstatus=false;
-$("#menu a").each(function () {
-  if ((urlstr + '/').indexOf($(this).attr('href')) > -1&&$(this).attr('href')!='') {
-    $(this).addClass('curs'); urlstatus = true;
-  } else {
-    $(this).removeClass('curs');
+  $('#gratuity-alert-btn').click(function(e){
+    OpenGratuityAlert()
+    e.stopPropagation();
+  })
+
+  $('.gratuity-alert-mask').click(function(e){
+    CloseGratuityAlert()
+    e.stopPropagation();
+  })
+
+  function OpenGratuityAlert(){
+    $('.gratuity-alert-box').removeClass('flipOutX');
+    $('.gratuity-alert-mask').fadeIn(400)
+    setTimeout(function(){
+      $('.gratuity-alert-box').css('display','block').addClass('flipInX');
+    },50)
+    // document.querySelector('body').style.overflow = 'hidden';
   }
+
+  function CloseGratuityAlert(){
+    $('.gratuity-alert-box').removeClass('flipInt').addClass('flipOutX');
+    setTimeout(function(){
+      $('.gratuity-alert-box').css('display','none')
+      $('.gratuity-alert-mask').fadeOut(1)
+    },600)
+    // document.querySelector('body').style.overflow = '';
+  }
+
 });
-if (!urlstatus) {$("#menu a").eq(0).addClass('curs'); }
+
+//导航选中处理
+var urlstr = location.href;
+//pop数组最后一个
+var iurl = "../index/"+urlstr.split('/').pop();
+if(urlstr.split('/').pop() == 'index.html'){
+  $("[href='../index.html']").addClass('curs')
+}else{
+  var aMenu = $("#menu a");
+  for(var i=0;i<aMenu.length;i++){
+      if(aMenu.eq(i).attr('href') == iurl){
+        aMenu.eq(i).addClass('curs').parents('.dropdown').find('a').addClass('curs')
+      }
+  }
+}
