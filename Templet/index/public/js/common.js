@@ -14,6 +14,12 @@ $(document).ready(function(){
     e.stopPropagation();
   })
 
+  //关闭按钮关闭弹窗
+  $('.close-btn').click(function(e){
+    CloseGratuityAlert()
+    e.stopPropagation();
+  })
+
   function OpenGratuityAlert(){
     $('.gratuity-alert-box').removeClass('flipOutX');
     $('.gratuity-alert-mask').fadeIn(400)
@@ -38,13 +44,15 @@ $(document).ready(function(){
 var urlstr = location.href;
 //pop数组最后一个
 var iurl = "../index/"+urlstr.split('/').pop();
+console.log(iurl)
 if(urlstr.split('/').pop() == 'index.html'){
   $("[href='../index.html']").addClass('curs')
 }else{
   var aMenu = $("#menu a");
   for(var i=0;i<aMenu.length;i++){
       if(aMenu.eq(i).attr('href') == iurl){
-        aMenu.eq(i).addClass('curs').parents('.dropdown').find('a').addClass('curs')
+        console.log(aMenu.eq(i).attr('href'))
+        aMenu.eq(i).addClass('curs').parents('.dropdown').find(">a").addClass('curs')
       }
   }
 }

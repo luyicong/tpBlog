@@ -29,9 +29,10 @@ body{background:#fff}
 .yoho167-sidebar{background:#fafafa;margin:20px 10px 10px;padding-top:25px}
 .yoho167-sidebar h3{font-size:20px;font-weight:400;padding:0 0 0 25px;border-left:4px solid #f63756;line-height:22px}
 .yoho167-sidebar .search{
-  width: 280px;
+  width: 100%;
   margin: 0 auto;
   padding-bottom: 25px;
+  padding-right: 20px;
 }
 .yoho167-sidebar .search input{
   height: 34px;
@@ -40,7 +41,8 @@ body{background:#fff}
   width: 182px;
   padding: 0 10px;
   border:1px solid #eee;
-  margin-right: 20px;
+  float: left;
+  margin:0 20px 10px 20px;
 }
 .yoho167-sidebar .search .submit-btn{
   height: 34px;
@@ -50,7 +52,8 @@ body{background:#fff}
   border: 1px solid #009688;
   color: #fff;
   font-size: 10pt;
-  float: right;
+  float: left;
+  margin-left: 20px;
 }
 .yoho167-c li{float:left;line-height:30px;padding:20px 30px;border-bottom:1px solid #f0f0f0}
 .yoho167-c li a{font-size:1pc;color:#333}
@@ -135,10 +138,18 @@ body{background:#fff}
 .main_left:hover img,.yoho167-banner .yoho167-a:hover img,.yoho167-banner .yoho167-b li:hover img,.yoho167-d li:hover img{transform:none}
 .yoho167-header .curs{background:0 0}
 }
-@media only screen and (min-width:768px) and (max-width:1023px){.the-nav>.nav>li a{padding:0 20px;transition:0.5s;}
+@media only screen and (min-width:768px) and (max-width:1023px){
+  .the-nav>.nav>li a{min-width:115px;text-align: center;transition:0.5s;}
+  .yoho167-search{
+    display: none;
+  }
 }
-@media only screen and (min-width:1024px) and (max-width:1199px){.yoho167-header .search input{width:75pt}
-.the-nav>.nav>li a{padding:0 15px;-webkit-transition:0.5s;-moz-transition:0.5s;-o-transition:0.5s;-ms-transition:0.5s;transition:0.5s;}
+@media only screen and (min-width:1024px) and (max-width:1199px){
+  .yoho167-header .search input{width:75pt}
+  .the-nav>.nav>li a{padding:0 15px;-webkit-transition:0.5s;-moz-transition:0.5s;-o-transition:0.5s;-ms-transition:0.5s;transition:0.5s;}
+  .yoho167-search{
+    display: none;
+  }
 }
 @media only screen and (max-width:767px){.yoho167-md-2,.yoho167-md-3,.yoho167-md-4,.yoho167-ml-7{width:100%}
 .yoho167-ml-3{float:left}
@@ -147,6 +158,7 @@ body{background:#fff}
 .yoho167-block-768{display:block}
 .yoho167-left-768{float:left}
 .yoho167-right-768{float:right}
+.pipe{margin:0 2px 0 3px}
 }
 @media only screen and (min-width:768px) and (max-width:1023px){.yoho167-md-2,.yoho167-md-3,.yoho167-md-4{width:50%}
 .yoho167-ml-6{width:67%;float:left}
@@ -273,4 +285,40 @@ body{background:#fff}
   display: none;
   opacity: 0.5;
   z-index: 3888;
+}
+.close-icon{
+  width: 30px;
+  height: 30px;
+  float: right;
+  margin: 10px;
+  background: url('../img/close_icon.png') no-repeat center center;
+  background-size: 20px 20px;
+  cursor:pointer;
+}
+
+/*关于我*/
+.yoho167-about{
+    overflow: hidden;
+}
+.avatar{
+  width: 80px;
+  height: 80px;
+  background-color: blue;
+  border-radius: 40px;
+  margin:0 auto 10px auto;
+  overflow: hidden;
+}
+.avatar img{
+  width: 100%;
+  height: 100%;
+}
+.about-info{
+    width: 100%;
+    overflow: hidden;
+}
+.about-info p{
+  line-height: 30px;
+  text-align: center;
+  font-size: 14px;
+  color: #999;
 }

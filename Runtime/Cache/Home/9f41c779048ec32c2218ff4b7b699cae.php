@@ -146,8 +146,8 @@ conf: '<?php echo C("WEB_CKEY");?>'
 	    </div>
 	</div></div>
 	<div class="yoho167-mr-3">
-		<div class="yoho167-sidebar cl">
-	<div class="search">
+		<div class="yoho167-sidebar yoho167-search cl">
+	<div class="search yoho167-c cl">
 		<form action="/search.html" method="get">
 			<input placeholder="输入关键字" name="kw" value="<?php echo I('kw');?>" type="text" required>
 			<button value="查询" class="submit-btn" type="submit">搜索</button>
@@ -215,6 +215,7 @@ conf: '<?php echo C("WEB_CKEY");?>'
 <!--打赏弹窗 start-->
 <div class="gratuity-alert-mask"></div>
 <div class="gratuity-alert-box animated">
+	<i class="close-icon close-btn"></i>
 </div>
 <!--打赏弹窗 end-->
 <script src="/Templet/index/public/js/common.js"></script>

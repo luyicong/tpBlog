@@ -32,7 +32,8 @@
 .the-nav>.nav{margin:0;line-height:normal;line-height:65px;font-size:1pc}
 .the-nav>.nav>li{display:inline-block;margin-bottom:0;position:relative}
 .the-nav>.nav>li .caret{margin-top:8px;margin-left:2px;border-top-color:#a7a7a7;border-bottom-color:#a7a7a7}
-.the-nav>.nav>li a{display:block;padding:0 25px;color:#fff;font-weight:500;text-decoration:none;-webkit-transition:.6s;-moz-transition:.6s;-o-transition:.6s;-ms-transition:.6s;transition:.6s;}
+.the-nav>.nav>li a{min-width: 115px;text-align: center;display:block;color:#fff;font-weight:500;text-decoration:none;-webkit-transition:.6s;
+  -moz-transition:.6s;-o-transition:.6s;-ms-transition:.6s;transition:.6s;}
 .the-nav>.nav>li:hover>a{color:#fff;background:#060808}
 .the-nav>.nav>li:hover .subnav{opacity: 1;display: block;}
 .the-nav>.nav>li:hover .caret{border-top-color:#303030;border-bottom-color:#303030}
