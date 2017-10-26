@@ -9,7 +9,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="uyan_auth" content="6aa51c9f35" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link href="/favicon.ico" rel="shortcut icon">
+<link href="/Public/img/favicon.ico" rel="shortcut icon">
 <link rel="stylesheet" href="/Templet/index/public/css/global.css">
 <link rel="stylesheet" href="/Templet/index/public/css/style.css">
 <link rel="stylesheet" href="/Templet/index/public/css/animate.css">
