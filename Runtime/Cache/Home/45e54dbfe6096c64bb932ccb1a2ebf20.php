@@ -103,7 +103,30 @@
 		<div class="pages"><?php echo ($page); ?></div>
 	</div>
 	<div class="yoho167-mr-3">
-		<div class="yoho167-sidebar yoho167-search cl">
+		<div class="yoho167-sidebar yoho167-about cl">
+	<div class="about yoho167-c cl">
+		<div class="avatar">
+			<a href="javascript:;"><img src="/Templet/index/public/img/avatar.jpg" alt=""></a>
+
+		</div>
+		<div class="about-info">
+			<p>网名：LYC123</p>
+			<p>职业：web前端、php开发</p>
+			<p>座右铭：付出，不亚于任何人的努力</p>
+		</div>
+		<div class="account-list">
+			<a class="account-icon github" target="_blank" href="https://github.com/luyicong" title="https://github.com/luyicong"></a>
+			<a class="account-icon qq" target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2804387501&site=qq&menu=yes" title="980469887"></a>
+			<a class="account-icon weixin" href="javascript:;">
+				<div class="weixin-code">
+					<img src="/Templet/index/public/img/weixin.jpg" alt="">
+				</div>
+			</a>
+		</div>
+	</div>
+</div>
+
+<div class="yoho167-sidebar yoho167-search cl">
 	<div class="search yoho167-c cl">
 		<form action="/search.html" method="get">
 			<input placeholder="输入关键字" name="kw" value="<?php echo I('kw');?>" type="text" required>

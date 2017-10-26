@@ -132,6 +132,15 @@
 			<p>职业：web前端、php开发</p>
 			<p>座右铭：付出，不亚于任何人的努力</p>
 		</div>
+		<div class="account-list">
+			<a class="account-icon github" target="_blank" href="https://github.com/luyicong" title="https://github.com/luyicong"></a>
+			<a class="account-icon qq" target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2804387501&site=qq&menu=yes" title="980469887"></a>
+			<a class="account-icon weixin" href="javascript:;">
+				<div class="weixin-code">
+					<img src="/Templet/index/public/img/weixin.jpg" alt="">
+				</div>
+			</a>
+		</div>
 	</div>
 </div>
 

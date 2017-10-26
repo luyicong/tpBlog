@@ -127,16 +127,29 @@ body{background:#fff}
 .yoho167-md{min-height:200px;background:#fff;margin:10px;padding:20px;color:#000;text-align:center;font-size:30px}
 .yoho167-mds{margin:0 10px}
 @media only screen and (max-width:767px){
-.main_right{margin:15px 0 10px 10px}
-.yoho167-banner .yoho167-a{margin:10px}
-.left3{padding-left:0}
-.main_left img{height:5pc;width:75pt}
-.main_left{margin:0 10px 5px 0;height:5pc}
-.main_right p{line-height:20px;padding-top:5px}
-.main_right h2{line-height:28px}
-.yoho167-banner .yoho167-a,.yoho167-banner .yoho167-a img{height:200px}
-.main_left:hover img,.yoho167-banner .yoho167-a:hover img,.yoho167-banner .yoho167-b li:hover img,.yoho167-d li:hover img{transform:none}
-.yoho167-header .curs{background:0 0}
+  .main_right{margin:15px 0 10px 10px}
+  .yoho167-banner .yoho167-a{margin:10px}
+  .left3{padding-left:0}
+  .main_left img{height:5pc;width:75pt}
+  .main_left{margin:0 10px 5px 0;height:5pc}
+  .main_right p{line-height:20px;padding-top:5px}
+  .main_right h2{line-height:28px}
+  .yoho167-banner .yoho167-a,.yoho167-banner .yoho167-a img{height:200px}
+  .main_left:hover img,.yoho167-banner .yoho167-a:hover img,.yoho167-banner .yoho167-b li:hover img,.yoho167-d li:hover img{transform:none}
+  .yoho167-header .curs{background:0 0}
+  /*.yoho167-about,.gratuity{
+    display: none;
+  }*/
+  .gratuity{
+      height: auto;
+      overflow: hidden;
+  }
+  .gratuity .phone-pay{
+    display: block;
+  }
+  .gratuity .gratuity-alert-btn{
+    display: none;
+  }
 }
 @media only screen and (min-width:768px) and (max-width:1023px){
   .the-nav>.nav>li a{min-width:115px;text-align: center;transition:0.5s;}
@@ -243,12 +256,21 @@ body{background:#fff}
 }
 /*打赏样式*/
 .gratuity{
-  height: 115px;
   margin-top: 15px;
   background: url('../img/wl.png') #f7f7f7;
   padding-top: 15px;
   padding-left: 15px;
   border-left: 4px solid #f1754f;
+  margin-bottom: 21px;
+}
+.phone-pay{
+  text-align: center;
+  padding-bottom: 16px;
+  display: none;
+}
+.phone-pay img{
+  display: block;
+  margin:8px auto;
 }
 .gratuity p{
   font-size: 12pt;
@@ -261,6 +283,7 @@ body{background:#fff}
   margin-top: 15px;
   color: #fff;
   border-radius: 4px;
+  margin-bottom: 21px;
 }
 .gratuity-alert-box{
   width:590px;
@@ -298,7 +321,14 @@ body{background:#fff}
 
 /*关于我*/
 .yoho167-about{
-    overflow: hidden;
+  border-top: 2px solid #f63756;
+}
+.yoho167-about::after{
+    /*overflow: hidden;*/
+    content: '';
+    display: block;
+    clear: both;
+    padding-bottom: 10px;
 }
 .avatar{
   width: 80px;
@@ -321,4 +351,48 @@ body{background:#fff}
   text-align: center;
   font-size: 14px;
   color: #999;
+}
+.account-list{
+  width: 100%;
+  height: 32px;
+  /*border: 1px solid red;*/
+  margin: 15px 0;
+  text-align: center;
+}
+.account-list .account-icon{
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+  display: inline-block;
+  margin:0 15px;
+}
+.account-icon.github{
+  background: url(../img/github_icon.png) no-repeat center center;
+}
+.account-icon.qq{
+  background: url(../img/qq_icon.png) no-repeat center center;
+}
+.account-icon.weixin{
+  background: url(../img/weixin_icon.png) no-repeat center center;
+  position: relative;
+}
+.account-list .weixin-code{
+  width: 220px;
+  height: 220px;
+  border: 1px solid #ddd;
+  position: absolute;
+  right: 32px;
+  top: 0;
+  background-color: #fff;
+  border-radius: 4px;
+  display: none;
+}
+.account-icon.weixin:hover .weixin-code{
+  display: block;
+}
+.account-list .weixin-code img{
+  width: 160px;
+  height:160px;
+  display: block;
+  margin:30px auto;
 }
